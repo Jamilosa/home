@@ -1,0 +1,561 @@
+{
+  "vaultName": "CS Vault    ",
+  "lastExport": 1739452260960,
+  "pluginVersion": "1.8.01",
+  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon",
+  "useCustomHeadContent": true,
+  "useCustomFavicon": false,
+  "files": [
+    "_files/accept-in-lan0-out-wan0.png",
+    "_files/accept-incoming-wan0-outgoing-lan0-established.png",
+    "_files/drop-forward-default.png",
+    "_files/Initial Home Lab Configuration1.png",
+    "_files/Initial Home Lab Configuration2.png",
+    "_files/Initial Home Lab Configuration3.png",
+    "_files/Initial Home Lab Configuration4.png",
+    "_files/Initial Home Lab Configuration5.png",
+    "_files/Pasted image 20250208204338.png",
+    "_files/Pasted image 20250208205022.png",
+    "_files/Pasted image 20250208205727.png",
+    "_files/Pasted image 20250210203253.png",
+    "_files/Pasted image 20250210212156.png",
+    "_files/Pasted image 20250210222828.png",
+    "_files/Pasted image 20250210231057.png",
+    "_files/Pasted image 20250211134315.png",
+    "_files/Pasted image 20250211143840.png",
+    "_files/Pasted image 20250211145608.png",
+    "_files/Pasted image 20250211151501.png",
+    "_files/Pasted image 20250213073703.png",
+    "_files/style.html",
+    "_tags/AD domain.md",
+    "_tags/firewall.md",
+    "_tags/iptables.md",
+    "_tags/log.md",
+    "_tags/port forwarding.md",
+    "_tags/SIEM.md",
+    "_tags/tcpdump.md",
+    "_tags/Wazuh.md",
+    "Projects/Initial Home Lab Setup.md",
+    "lib/media/initial-home-lab-configuration1.png",
+    "lib/media/initial-home-lab-configuration2.png",
+    "lib/media/initial-home-lab-configuration3.png",
+    "lib/media/initial-home-lab-configuration4.png",
+    "lib/media/initial-home-lab-configuration5.png",
+    "lib/media/accept-in-lan0-out-wan0.png",
+    "lib/media/accept-incoming-wan0-outgoing-lan0-established.png",
+    "lib/media/drop-forward-default.png",
+    "lib/media/pasted-image-20250213073703.png",
+    "lib/media/pasted-image-20250210212156.png",
+    "lib/media/pasted-image-20250210222828.png",
+    "lib/media/pasted-image-20250210231057.png",
+    "lib/media/pasted-image-20250208204338.png",
+    "lib/media/pasted-image-20250210203253.png",
+    "lib/media/pasted-image-20250208205022.png",
+    "lib/media/pasted-image-20250208205727.png",
+    "lib/media/pasted-image-20250211145608.png",
+    "lib/media/pasted-image-20250211143840.png",
+    "lib/media/pasted-image-20250211134315.png",
+    "lib/media/pasted-image-20250211151501.png",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/6155340132a851f6089e.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/html/custom-head-content.html",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/main-styles.css"
+  ],
+  "mainDependencies": [
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/6155340132a851f6089e.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/html/custom-head-content.html",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/main-styles.css"
+  ],
+  "fileInfo": {
+    "_files/accept-in-lan0-out-wan0.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 33997,
+      "exportedPath": "_files/accept-in-lan0-out-wan0.png",
+      "dependencies": []
+    },
+    "_files/accept-incoming-wan0-outgoing-lan0-established.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 45870,
+      "exportedPath": "_files/accept-incoming-wan0-outgoing-lan0-established.png",
+      "dependencies": []
+    },
+    "_files/drop-forward-default.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 34460,
+      "exportedPath": "_files/drop-forward-default.png",
+      "dependencies": []
+    },
+    "_files/Initial Home Lab Configuration1.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 156371,
+      "exportedPath": "_files/initial-home-lab-configuration1.png",
+      "dependencies": []
+    },
+    "_files/Initial Home Lab Configuration2.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 63169,
+      "exportedPath": "_files/initial-home-lab-configuration2.png",
+      "dependencies": []
+    },
+    "_files/Initial Home Lab Configuration3.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 80492,
+      "exportedPath": "_files/initial-home-lab-configuration3.png",
+      "dependencies": []
+    },
+    "_files/Initial Home Lab Configuration4.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 129740,
+      "exportedPath": "_files/initial-home-lab-configuration4.png",
+      "dependencies": []
+    },
+    "_files/Initial Home Lab Configuration5.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 13390,
+      "exportedPath": "_files/initial-home-lab-configuration5.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250208204338.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 17459,
+      "exportedPath": "_files/pasted-image-20250208204338.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250208205022.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 6977,
+      "exportedPath": "_files/pasted-image-20250208205022.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250208205727.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 15637,
+      "exportedPath": "_files/pasted-image-20250208205727.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250210203253.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 4245,
+      "exportedPath": "_files/pasted-image-20250210203253.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250210212156.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 90893,
+      "exportedPath": "_files/pasted-image-20250210212156.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250210222828.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 61628,
+      "exportedPath": "_files/pasted-image-20250210222828.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250210231057.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 119050,
+      "exportedPath": "_files/pasted-image-20250210231057.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250211134315.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 169035,
+      "exportedPath": "_files/pasted-image-20250211134315.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250211143840.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 59261,
+      "exportedPath": "_files/pasted-image-20250211143840.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250211145608.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 98539,
+      "exportedPath": "_files/pasted-image-20250211145608.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250211151501.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 123576,
+      "exportedPath": "_files/pasted-image-20250211151501.png",
+      "dependencies": []
+    },
+    "_files/Pasted image 20250213073703.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 46935,
+      "exportedPath": "_files/pasted-image-20250213073703.png",
+      "dependencies": []
+    },
+    "_files/style.html": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 285,
+      "exportedPath": "_files/style.html",
+      "dependencies": []
+    },
+    "_tags/AD domain.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/ad-domain.html",
+      "dependencies": []
+    },
+    "_tags/firewall.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/firewall.html",
+      "dependencies": []
+    },
+    "_tags/iptables.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/iptables.html",
+      "dependencies": []
+    },
+    "_tags/log.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/log.html",
+      "dependencies": []
+    },
+    "_tags/port forwarding.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/port-forwarding.html",
+      "dependencies": []
+    },
+    "_tags/SIEM.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/siem.html",
+      "dependencies": []
+    },
+    "_tags/tcpdump.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/tcpdump.html",
+      "dependencies": []
+    },
+    "_tags/Wazuh.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 0,
+      "exportedPath": "_tags/wazuh.html",
+      "dependencies": []
+    },
+    "Projects/Initial Home Lab Setup.md": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 15219,
+      "exportedPath": "projects/initial-home-lab-setup.html",
+      "dependencies": [
+        "lib/media/initial-home-lab-configuration1.png",
+        "lib/media/initial-home-lab-configuration2.png",
+        "lib/media/initial-home-lab-configuration3.png",
+        "lib/media/initial-home-lab-configuration4.png",
+        "lib/media/initial-home-lab-configuration5.png",
+        "lib/media/accept-in-lan0-out-wan0.png",
+        "lib/media/accept-incoming-wan0-outgoing-lan0-established.png",
+        "lib/media/drop-forward-default.png",
+        "lib/media/pasted-image-20250213073703.png",
+        "lib/media/pasted-image-20250210212156.png",
+        "lib/media/pasted-image-20250210222828.png",
+        "lib/media/pasted-image-20250210231057.png",
+        "lib/media/pasted-image-20250208204338.png",
+        "lib/media/pasted-image-20250210203253.png",
+        "lib/media/pasted-image-20250208205022.png",
+        "lib/media/pasted-image-20250208205727.png",
+        "lib/media/pasted-image-20250211145608.png",
+        "lib/media/pasted-image-20250211143840.png",
+        "lib/media/pasted-image-20250211134315.png",
+        "lib/media/pasted-image-20250211151501.png"
+      ]
+    },
+    "lib/media/initial-home-lab-configuration1.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 156371,
+      "exportedPath": "lib/media/initial-home-lab-configuration1.png",
+      "dependencies": []
+    },
+    "lib/media/initial-home-lab-configuration2.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 63169,
+      "exportedPath": "lib/media/initial-home-lab-configuration2.png",
+      "dependencies": []
+    },
+    "lib/media/initial-home-lab-configuration3.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 80492,
+      "exportedPath": "lib/media/initial-home-lab-configuration3.png",
+      "dependencies": []
+    },
+    "lib/media/initial-home-lab-configuration4.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 129740,
+      "exportedPath": "lib/media/initial-home-lab-configuration4.png",
+      "dependencies": []
+    },
+    "lib/media/initial-home-lab-configuration5.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 13390,
+      "exportedPath": "lib/media/initial-home-lab-configuration5.png",
+      "dependencies": []
+    },
+    "lib/media/accept-in-lan0-out-wan0.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 33997,
+      "exportedPath": "lib/media/accept-in-lan0-out-wan0.png",
+      "dependencies": []
+    },
+    "lib/media/accept-incoming-wan0-outgoing-lan0-established.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 45870,
+      "exportedPath": "lib/media/accept-incoming-wan0-outgoing-lan0-established.png",
+      "dependencies": []
+    },
+    "lib/media/drop-forward-default.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 34460,
+      "exportedPath": "lib/media/drop-forward-default.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250213073703.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 46935,
+      "exportedPath": "lib/media/pasted-image-20250213073703.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250210212156.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 90893,
+      "exportedPath": "lib/media/pasted-image-20250210212156.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250210222828.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 61628,
+      "exportedPath": "lib/media/pasted-image-20250210222828.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250210231057.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 119050,
+      "exportedPath": "lib/media/pasted-image-20250210231057.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250208204338.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 17459,
+      "exportedPath": "lib/media/pasted-image-20250208204338.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250210203253.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 4245,
+      "exportedPath": "lib/media/pasted-image-20250210203253.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250208205022.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 6977,
+      "exportedPath": "lib/media/pasted-image-20250208205022.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250208205727.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 15637,
+      "exportedPath": "lib/media/pasted-image-20250208205727.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250211145608.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 98539,
+      "exportedPath": "lib/media/pasted-image-20250211145608.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250211143840.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 59261,
+      "exportedPath": "lib/media/pasted-image-20250211143840.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250211134315.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 169035,
+      "exportedPath": "lib/media/pasted-image-20250211134315.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20250211151501.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 123576,
+      "exportedPath": "lib/media/pasted-image-20250211151501.png",
+      "dependencies": []
+    },
+    "lib/fonts/94f2f163d4b698242fef.otf": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 66800,
+      "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
+      "dependencies": []
+    },
+    "lib/fonts/72505e6a122c6acd5471.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 104232,
+      "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/2d5198822ab091ce4305.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 104332,
+      "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 98868,
+      "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cb10ffd7684cd9836a05.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 106876,
+      "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/b5f0f109bc88052d4000.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 105804,
+      "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cbe0ae49c52c920fd563.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 106108,
+      "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/535a6cf662596b3bd6a6.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 111708,
+      "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/70cc7ff27245e82ad414.ttf": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 192740,
+      "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/454577c22304619db035.ttf": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 161376,
+      "exportedPath": "lib/fonts/454577c22304619db035.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/52ac8f3034507f1d9e53.ttf": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 191568,
+      "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/05b618077343fbbd92b7.ttf": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 155288,
+      "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 7876,
+      "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+      "dependencies": []
+    },
+    "lib/media/6155340132a851f6089e.svg": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 315,
+      "exportedPath": "lib/media/6155340132a851f6089e.svg",
+      "dependencies": []
+    },
+    "lib/html/file-tree.html": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 28121,
+      "exportedPath": "lib/html/file-tree.html",
+      "dependencies": []
+    },
+    "lib/scripts/webpage.js": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 47290,
+      "exportedPath": "lib/scripts/webpage.js",
+      "dependencies": []
+    },
+    "lib/scripts/minisearch.js": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 29422,
+      "exportedPath": "lib/scripts/minisearch.js",
+      "dependencies": []
+    },
+    "lib/media/favicon.png": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 1105,
+      "exportedPath": "lib/media/favicon.png",
+      "dependencies": []
+    },
+    "lib/html/custom-head-content.html": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 285,
+      "exportedPath": "lib/html/custom-head-content.html",
+      "dependencies": []
+    },
+    "lib/styles/obsidian.css": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 137228,
+      "exportedPath": "lib/styles/obsidian.css",
+      "dependencies": []
+    },
+    "lib/styles/global-variable-styles.css": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 262,
+      "exportedPath": "lib/styles/global-variable-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/main-styles.css": {
+      "modifiedTime": 1739452260960,
+      "sourceSize": 23130,
+      "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    }
+  }
+}

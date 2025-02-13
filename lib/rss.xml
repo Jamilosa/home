@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CS Vault    ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>CS Vault    </title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 13 Feb 2025 13:11:02 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 13 Feb 2025 13:11:00 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[AD domain]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\ad-domain.html</link><guid isPermaLink="false">_tags/AD domain.md</guid><pubDate>Thu, 13 Feb 2025 11:07:44 GMT</pubDate></item><item><title><![CDATA[firewall]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\firewall.html</link><guid isPermaLink="false">_tags/firewall.md</guid><pubDate>Thu, 13 Feb 2025 11:08:00 GMT</pubDate></item><item><title><![CDATA[iptables]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\iptables.html</link><guid isPermaLink="false">_tags/iptables.md</guid><pubDate>Thu, 13 Feb 2025 11:07:56 GMT</pubDate></item><item><title><![CDATA[port forwarding]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\port-forwarding.html</link><guid isPermaLink="false">_tags/port forwarding.md</guid><pubDate>Thu, 13 Feb 2025 11:08:03 GMT</pubDate></item><item><title><![CDATA[tcpdump]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\tcpdump.html</link><guid isPermaLink="false">_tags/tcpdump.md</guid><pubDate>Thu, 13 Feb 2025 11:07:58 GMT</pubDate></item><item><title><![CDATA[Wazuh]]></title><description><![CDATA[ 
+ ]]></description><link>_tags\wazuh.html</link><guid isPermaLink="false">_tags/Wazuh.md</guid><pubDate>Thu, 13 Feb 2025 11:07:48 GMT</pubDate></item><item><title><![CDATA[Initial Home Lab Setup]]></title><description><![CDATA[ 
+ <br>2025-02-06 10:38<br>
+Tags: <a data-href="AD domain" href="_tags\ad-domain.html" class="internal-link" target="_self" rel="noopener nofollow">AD domain</a> | <a data-href="Wazuh" href="_tags\wazuh.html" class="internal-link" target="_self" rel="noopener nofollow">Wazuh</a> | <a data-href="SIEM" href="_tags\siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a> | <a data-href="iptables" href="_tags\iptables.html" class="internal-link" target="_self" rel="noopener nofollow">iptables</a> | <a data-href="tcpdump" href="_tags\tcpdump.html" class="internal-link" target="_self" rel="noopener nofollow">tcpdump</a> | <a data-href="firewall" href="_tags\firewall.html" class="internal-link" target="_self" rel="noopener nofollow">firewall</a> | <a data-href="port forwarding" href="_tags\port-forwarding.html" class="internal-link" target="_self" rel="noopener nofollow">port forwarding</a> | <a data-href="log" href="_tags\log.html" class="internal-link" target="_self" rel="noopener nofollow">log</a><br><br><br><br>Setting up a home lab provides a controlled environment to simulate cyber attacks, test defenses, and develop mitigation strategies. It enhances hands-on cybersecurity skills, making it a powerful tool for learning and experimentation.<br>In this entry, I'm refining my home lab setup, focusing on Wazuh as a SIEM that collects security events from a firewall and multiple endpoint devices.<br><br>
+<br>Deploying Wazuh on Docker by following official documentation 
+<br>Setting up Active Directory (Windows Server 2022)
+<br>Configuring AntiX as a firewall (iptables, NAT, port forwarding, logging)
+<br>Setting up a router for internal networking
+<br><br><br><img alt="Initial Home Lab Configuration1.png" src="lib\media\initial-home-lab-configuration1.png"><br>
+Figure 1: Network diagram of the internal and external network for the home lab.<br><br><br>
+<br>Operating systems listed on previous section.
+<br>At least two network interfaces on AntiX host.
+<br>SSH server running on Ubuntu and AntiX (optional).
+<br><br><br><br>Deploying Wazuh on docker is quick, simple, and requires only a few steps:<br>
+<br>Increase vm.max_map_count to support the Wazuh Indexer
+<br>Install Docker and Docker Compose
+<br>Clone the official Wazuh container repository
+<br>Generate a self-signed certificate for secure communication
+<br>Run docker-compose up to start the deployment
+<br><br>Wazuh manager monitors endpoints through the Wazuh agents installed on target hosts. Deployment steps for Windows/Linux agents:<br>
+<br>Access the Wazuh web interface at https://&lt;server.ip.address&gt;
+<br>Navigate to Menu &gt; Server Management &gt; Endpoint Summary &gt; Deploy New Agent
+<br>Select the target operating system
+<br>Specify server IP address
+<br>Assign an agent name and group (optional)
+<br>Execute provided command to download and install agent
+<br>Start the Wazuh agent or enable auto-start.
+<br>While the setup itself is straightforward, I wanted to go beyond simply running the Wazuh container so I studied Wazuh's architecture to better understand how components interact with each other. For a closer look on Wazuh's architecture, see my notes on <a data-href="Wazuh Architecture" href="Wazuh Architecture" class="internal-link" target="_self" rel="noopener nofollow">Wazuh Architecture</a>.<br><br>Setup up Active Directory on Windows Server 2022 by following the standard procedures with minor changes on the configurations:<br><br>I also added OUs, users, and groups for policy and permission management (see Figure 2).<br>
+<img alt="Initial Home Lab Configuration2.png" src="lib\media\initial-home-lab-configuration2.png"><br>
+Figure 2: Initial Active Directory domain hierarchy for eventura.lab.<br><br><br> Assigning intuitive interface names increases the readability of the configurations and ease troubleshooting in the future.<br><br>I updated the NAME value of a row that corresponds to the network interface card's MAC address in /etc/udev/rules.d/70-persistent-net.rules (see Figure 3) and applied the changes using the following commands:<br>sudo udevadm control --reload-rules
+sudo udevadm trigger
+<br><img alt="Initial Home Lab Configuration3.png" src="lib\media\initial-home-lab-configuration3.png"><br>
+Figure 3: Editing /etc/udev/rules.d/70-persistent-net.rules to rename network interfaces.<br><br>For consistency, I assigned static IP addresses to both wan0 and lan0 interface in /etc/network/interfaces. The last line creates a static route to the lab network 10.0.0.0/24 via the lab router 10.0.1.2 that is connected on lan0 interface:<br>auto wan0
+iface wan0 inet static
+    address 192.168.1.250
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+
+auto lan0
+iface lan0 inet static
+    address 10.0.1.1
+    netmask 255.255.255.0
+
+up ip route add 10.0.0.0/24 via 10.0.1.2 dev lan0
+<br>Restart the networking service to apply the changes:<br>sudo service networking restart
+<br>I ran ip a to verify the changes before continuing with the next steps (see Figure 4).<br>
+<img alt="Initial Home Lab Configuration4.png" src="lib\media\initial-home-lab-configuration4.png"><br>
+Figure 4: Output of ip a verifying static IP assignment interface renaming.<br><br>IP forwarding, more commonly known as routing is a feature of Linux kernel that is disabled by default. I enabled the IP forwarding on /etc/sysctl.conf (see Figure 5) and applied the changes with:<br>sudo sysctl -p
+<br>I then used iptables to control the traffic passing through the firewall.<br>
+<br>Default: Drop all forwarded packets unless explicitly allowed.
+<br>Outgoing Traffic: Allow packets from lan0 -&gt; wan0.
+<br>Incoming Traffic: Allow only related/established connection from wan0 -&gt; lan0.
+<br>sudo iptables -P FORWARD DROP
+sudo iptables -A FORWARD -i lan0 -o wan0 -j ACCEPT
+sudo iptables -A FORWARD -i wan0 -o lan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+<br>See Figure 6-8 for the packet flow.<br><img alt="Initial Home Lab Configuration5.png" src="lib\media\initial-home-lab-configuration5.png"><br>
+Figure 5: Enabling IP forwarding in&nbsp;/etc/sysctl.conf&nbsp;(uncommenting&nbsp;net.ipv4.ip_forward=1).<br><img alt="accept-in-lan0-out-wan0.png" src="lib\media\accept-in-lan0-out-wan0.png"><br>
+Figure 6: All traffic from lab router destined to the external network are allowed.<br><img alt="accept-incoming-wan0-outgoing-lan0-established.png" src="lib\media\accept-incoming-wan0-outgoing-lan0-established.png"><br>
+Figure 7: Packet (5) coming in wan0 interface and going out of lan0 interface is allowed because it was a response to a packet (1) that originated within the lan0 interface.<br><img alt="drop-forward-default.png" src="lib\media\drop-forward-default.png"><br>
+Figure 8: Packet that does not match any rule on the FORWARD chain are dropped by default.<br><br>NAT (Masquerade) was configured to turn the real source IP address of outbound traffic into the firewall's own IP address (see Figure 9). This simplifies the routing when internal network's subnet is changed. 
+<br>sudo iptables -t nat -A POSTROUTING -o wan0 -j MASQUERADE
+<br><img alt="Pasted image 20250213073703.png" src="lib\media\pasted-image-20250213073703.png"><br>
+Figure 9: AntiX firewall translates the packet source IP address (1) into its own wan0 IP address (3) before passing it to the next router; SNAT. It also reverse the process for return traffic by changing the destination (4) to the real destination (6) IP address; DNAT. <br>I saved the changes in the iptables using iptables-persistent with:<br>sudo apt update &amp;&amp; sudo apt install iptables-persistent -y
+sudo iptables-save | sudo tee /etc/iptables/rules.v4   
+<br><br>To access to the Ubuntu Server's SSH service over the external network, I enabled port forwarding on the AntiX firewall using the iptables (see Figure 10). Since AntiX firewall is already running SSH service on port 22, I set the firewall to listen on port 2222 (192.168.1.250:2222), perform DNAT and send the traffic to port 22 of the Ubuntu Server (10.0.0.2:22). Figure 11 shows the packet got DNATed and SNATed as it pass through the firewall. The response on Figure 12  confirms that SSH traffic from external host was successfully forwarded to the internal host.<br><img alt="Pasted image 20250210212156.png" src="lib\media\pasted-image-20250210212156.png"><br>
+Figure 10: Iptables Destination NAT rule forwards external SSH traffic (port 2222) to Ubuntu Server (port 22).<br><img alt="Pasted image 20250210222828.png" src="lib\media\pasted-image-20250210222828.png"><br>
+Figure 11: Traffic flow diagram for SSH port forwarding through the firewall.<br><img alt="Pasted image 20250210231057.png" src="lib\media\pasted-image-20250210231057.png"><br>
+Figure 12: Right: Firewall's wan0 interface received a packet from an external host (192.168.1.233:44966) destined to port 2222, seq 2383482268 indicates the start of SSH handshake.<br>
+Left: Firewall's lan0 interface received an SSH packet from Ubuntu Server (10.0.0.2:22) destined to the external host (192.168.1.233:44966), ack 2383482269 (seq+1) indicates that it was a response to the SSH handshake from the external host.<br><br><br>To make this setup work. I configured the router's WAN IP address to the same network as the firewall's lan0 interface. Additionally, I set the router's default gateway to the firewall's lan0 IP address to ensure that external traffic get routed to the firewall (see Figure 13). Since AntiX firewall is already performing NAT, I disabled it on the router (see Figure 14).<br>
+<img alt="Pasted image 20250208204338.png" src="lib\media\pasted-image-20250208204338.png"><br>
+Figure 13: Router WAN configuration matching the firewall’s LAN subnet (10.0.1.0/24).<br><img alt="Pasted image 20250210203253.png" src="lib\media\pasted-image-20250210203253.png"><br>
+Figure 14: NAT was disabled on WAN interface.<br><br>I assigned 10.0.0.254 as the lab router's LAN IP address and subnet mask to 255.255.255.0. (see Figure 15). This establishes that the router belongs to the subnet 10.0.0.0/24. I also configured the DHCP server for new hosts to send packet going to the external network to be routed on the lab router. Hosts will also use the Domain Controller as their primary DNS server (see Figure 16).<br><img alt="Pasted image 20250208205022.png" src="lib\media\pasted-image-20250208205022.png"><br>
+Figure 15: The LAN IP address was set to 10.0.0.254/24 which also set the local subnet to 10.0.0.0/24.<br><img alt="Pasted image 20250208205727.png" src="lib\media\pasted-image-20250208205727.png"><br>
+Figure 16: The router set its own IP address as default gateway and the DC as the primary DNS server.<br><br><br>While blocking unwanted traffic might seem enough. It might be important to log contextual information such as the time when the traffic was blocked, who sent the traffic, and where it is destined to go. Figure 17 shows an iptables rules that log a packet from lan0 to wan0 that is using tcp port 80 before dropping that same packet.<br>
+<img alt="Pasted image 20250211145608.png" src="lib\media\pasted-image-20250211145608.png"><br>
+Figure 17: Iptables rules logging and blocking HTTP traffic on wan0 interface.<br><br>Iptables log are stored to the /var/log/kern.log by default which includes all other logs related to the kernel. I installed rsyslog and edited its configuration on /etc/rysyslog.conf to assign kernel logs that has both 'IN=' and 'OUT=' to be stored on /var/log/iptables.log (see Figure 18). Then I restarted rsyslog service to apply the changes with the following command:<br>sudo service rsyslog restart
+<br><img alt="Pasted image 20250211143840.png" src="lib\media\pasted-image-20250211143840.png"><br>
+Figure 18: Rsyslog configuration filtering iptables logs to&nbsp;/var/log/iptables.log.<br><br>Before I applied the rules on Figure 17, I tested the command curl to access an HTTP-only site http://httpforever.com/ from the Ubuntu Server. Figure 19 shows the http response from the site.<br>
+<img alt="Pasted image 20250211134315.png" src="lib\media\pasted-image-20250211134315.png"><br>
+Figure 19: Curl test confirms HTTP access before firewall rule implementation.<br>After the rules on Figure 17 was applied using the command below. HTTP traffic from lan0 to wan0 has been successfully logged and blocked (see Figure 20).<br>sudo iptables-restore &lt; /etc/iptables/rules.v4
+<br><img alt="Pasted image 20250211151501.png" src="lib\media\pasted-image-20250211151501.png"><br>
+Figure 20: Blocked HTTP traffic logged in&nbsp;/var/log/iptables.log.<br><br>
+<br>Although Wazuh deployment was straightforward, the default configuration generates large volume of events, indicating the need for further fine-tuning.
+<br>The heavy reliance on DNS of AD Domain was unexpected but it highlights the crucial role DNS plays in authentication and network management.    
+<br>The centralized resource management and user permission control offered by AD can significantly increase an organization's network security and operational efficiency.
+<br>Assigning intuitive interface names in the firewall greatly simplified the management and understanding of iptables rules. 
+<br>Prior experience with ACL on Cisco Packet Tracer was beneficial in grasping the structure and logic behind iptables rules.
+<br>Creating packet flow diagrams and making assumptions on what effects a configuration change would do before testing proved highly effective in identifying overlooked aspects. 
+<br><br>
+<br>Configure Wazuh to receive and analyze iptables firewall logs.
+<br>Fine-tune Wazuh rules to focus on more critical events and reduce noise.
+<br>Implement File Integrity feature of Wazuh for the AD environment to detect unauthorized changes.
+<br>Harden a Wazuh agent's host to further improve overall security.
+<br>Enhance current iptables rules for stronger filtering and improved visibility.
+<br>Continue documenting incremental improvements in the configurations and lab architecture.
+<br><br>This setup phase was essential in establishing the initial configurations of the home laboratory's core components. Deploying Wazuh server, Active Directory domain, and setting up iptables-based firewall provided practical insights into enterprise-grade security tools and their role in securing a network. <br><br><a data-tooltip-position="top" aria-label="https://documentation.wazuh.com/current/deployment-options/docker/index.html" rel="noopener nofollow" class="external-link" href="https://documentation.wazuh.com/current/deployment-options/docker/index.html" target="_blank">Deployment on Docker - Wazuh documentation</a><br>
+<a data-tooltip-position="top" aria-label="https://www.itechguides.com/how-to-setup-a-windows-server-2022-ad-domain-step-by-step/" rel="noopener nofollow" class="external-link" href="https://www.itechguides.com/how-to-setup-a-windows-server-2022-ad-domain-step-by-step/" target="_blank">How to Setup a Windows Server 2022 AD Domain (Step-by-step) - Itechguides</a><br>
+<a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=NAdJojxENEU" rel="noopener nofollow" class="external-link" href="https://www.youtube.com/watch?v=NAdJojxENEU" target="_blank">iptables Demystified - Port Redirection and Forwarding HTTP Traffic to another machine</a><br>
+<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Netfilter" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/Netfilter" target="_blank">Netfilter - Wikipedia</a><br>
+<a data-tooltip-position="top" aria-label="https://tecadmin.net/enable-logging-in-iptables-on-linux/" rel="noopener nofollow" class="external-link" href="https://tecadmin.net/enable-logging-in-iptables-on-linux/" target="_blank">Enabling Logging in Iptables on Linux: A Beginner's Guide – TecAdmin</a><br>
+<a data-tooltip-position="top" aria-label="https://www.networkinghowtos.com/howto/change-the-iptables-log-file/#:~:text=If%20you%20want%20to%20change%20the%20file%20that,log%20file%2C%20containing%20just%20the%20iptables%20log%20information." rel="noopener nofollow" class="external-link" href="https://www.networkinghowtos.com/howto/change-the-iptables-log-file/#:~:text=If%20you%20want%20to%20change%20the%20file%20that,log%20file%2C%20containing%20just%20the%20iptables%20log%20information." target="_blank">Change the IPTables log file - Networking HowTos</a>]]></description><link>projects\initial-home-lab-setup.html</link><guid isPermaLink="false">Projects/Initial Home Lab Setup.md</guid><pubDate>Thu, 13 Feb 2025 13:05:06 GMT</pubDate><enclosure url="lib\media\initial-home-lab-configuration1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib\media\initial-home-lab-configuration1.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
