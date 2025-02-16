@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Jamilosa</title>
+    <title>Cybersecurity Portfolio</title>
+    <link rel="icon" href="./lib/media/favicon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -15,8 +16,7 @@
           <p class="title">
             <strong>Aspiring SOC Analyst</strong>
           </p>
-          <p class="subtitle">Cybersecurity isn't just about protecting data.</p>
-          <p class="subtitle">It's about protecting people.</p>
+          <p class="subtitle">[ insert tagline ]</p>
         </div>
         <div class="left-panel-bottom">
           <div class="contact-container">
@@ -42,7 +42,7 @@
             </div>
             <div class="section-content about-content">
               <p class="paragraph">For the longest time, I wasn't sure what I really wanted to do. There were so many fascinating fields—agriculture, engineering, medicine, psychology, and history. Tech wasn't even on my radar. I drifted from one interest to another, but one thing never changed: my love for learning and figuring out how things work.</p>
-              <p class="paragraph">At some point, I realized there was no perfect answer. I simply had to choose a path that aligned with my values. The world is becoming increasingly dependent on technology, and with that comes an overwhelming amount of data that organizations must protect. The rising number of data breaches and ransomware attacks, especially those targeting hospitals and healthcare institutions, was deeply unsettling. The idea that malicious actors would endanger lives for profit felt like a call to action.</p>  
+              <p class="paragraph">At some point, I realized there was no perfect answer. I simply had to choose a path that aligned with my values. The world is becoming increasingly dependent on technology, and with that comes an overwhelming amount of data that organizations must protect. The rising number of data breaches and ransomware attacks, especially those targeting hospitals and healthcare institutions, was deeply unsettling. The idea that malicious actors would endanger lives for profit felt like a call to action. Cybersecurity isn't just about protecting data, it's about protecting people.</p>  
               <p class="paragraph">This portfolio reflects my commitment to continuous learning, even with limited resources. Integrity and a strong ethical foundation guide me on this journey.</p>
               </div>
           </div>
@@ -156,44 +156,34 @@
               <p>Projects and Blogs</p>
             </div>
             <div class="section-content project-content">
-              <div class="project-item">
-                <div class="project-thumbnail">
-                  <img src="./src/forest.jpg" alt="Project Thumbnail">
-                </div>
-                <div class="project-details">
-                  <div class="project-title">
-                    <p class="section-subtitle">Cybersecurity Risk Assessment Tool</p>
-                  </div>
-                  <div class="project-description">
-                    <p class="paragraph">Developed a comprehensive risk assessment platform to identify and mitigate potential security vulnerabilities.</p>
-                  </div>
-                  <div class="project-tag">
-                    <a href="./knowledge-area/tags.html#penetration-testing" class="tag domain">Penetration Testing</a>
-                    <a href="./knowledge-area/tags.html#risk-assessment" class="tag domain">Risk Assessment</a>
-                  </div>
-                </div>
-              </div>
+
               <div class="project-item">
                 <div class="project-thumbnail">
                   <img src="./src/forest.jpg" alt="Network Project">
                 </div>
                 <div class="project-details">
                   <div class="project-title">
-                    <p class="section-subtitle">Network Security Analyzer</p>
+                    <a href="projects/initial-home-lab-setup.html" class="project-hyperlink">
+                      <p class="section-subtitle">Initial Home Lab Setup</p>
+                    </a>
                   </div>
                   <div class="project-description">
-                    <p class="paragraph">Implemented a network monitoring tool to detect and prevent potential security breaches.</p>
+                    <p class="paragraph">Built a home lab featuring Wazuh for SIEM, an Active Directory domain, and iptables firewall to explore security monitoring and network defense.</p>
                   </div>
                   <div class="project-tag">
-                    <a href="./knowledge-area/tags.html#network-security" class="tag domain">Network Security</a>
-                    <a href="./knowledge-area/tags.html#wireshark" class="tag tool">Wireshark</a>
-                    <a href="./knowledge-area/tags.html#penetration-testing" class="tag domain">Penetration Testing</a>
-                    <a href="./knowledge-area/tags.html#tcpip-model" class="tag concept">TCP/IP Model</a>
-                    <a href="./knowledge-area/tags.html#nmap" class="tag tool">Nmap</a>
-                    <a href="./knowledge-area/tags.html#cyber-kill-chain" class="tag concept">Cyber Kill Chain</a>
+                    <a href="_tags/netwo" class="tag domain">network defense</a>
+                    <a class="tag tool">Iptables</a>
+                    <a class="tag tool">Wazuh</a>
+                    <a class="tag tool">tcpdump</a>
+                    <a class="tag concept">Active Directory</a>
+                    <a class="tag concept">SIEM</a>
+                    <a class="tag concept">firewall</a>
+                    <a class="tag concept">port forwarding</a>
+                    <a class="tag concept">log</a>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -227,49 +217,57 @@
         }
       });
       document.addEventListener("DOMContentLoaded", () => {
-        // Collect all tags from Section 4
-        const tags = document.querySelectorAll(".project-tag .tag");
-        const tagCategories = {
-          domain: {},
-          concept: {},
-          tool: {}
-        };
-        // Count occurrences of each tag and sort them into categories
-        tags.forEach(tag => {
-          const category = tag.classList.contains("domain") ? "domain" : tag.classList.contains("concept") ? "concept" : "tool";
-          // Format the tag name for href (lowercase, no special characters, dashes for spaces)
-          const tagName = tag.textContent.trim();
-          const formattedHref = tagName.toLowerCase().replace(/[^a-z0-9\s]/g, "") // Remove special characters
-            .replace(/\s+/g, "-"); // Replace spaces with dashes
-          // Increment count or initialize
-          if (tagCategories[category][tagName]) {
-            tagCategories[category][tagName].count++;
-          } else {
-            tagCategories[category][tagName] = {
-              count: 1,
-              href: `./knowledge-area/tags.html#${formattedHref}`
-            };
-          }
-        });
-        // Populate Section 2 dynamically
-        const populateKnowledgeTags = (containerSelector, tags, category) => {
-          const container = document.querySelector(containerSelector);
-          container.innerHTML = ""; // Clear any pre-defined tags
-          // Create and append tags
-          Object.entries(tags).forEach(([tagName, tagData]) => {
-            const a = document.createElement("a");
-            a.href = tagData.href;
-            a.className = `tag ${category}`;
-            // Add count only if greater than 1
-            a.textContent = tagData.count > 1 ? `${tagName} (${tagData.count})` : tagName;
-            container.appendChild(a);
-          });
-        };
-        // Call the function for each category
-        populateKnowledgeTags(".knowledge-domain-tags .project-tag", tagCategories.domain, "domain");
-        populateKnowledgeTags(".knowledge-concept-tags .project-tag", tagCategories.concept, "concept");
-        populateKnowledgeTags(".knowledge-tool-tags .project-tag", tagCategories.tool, "tool");
+      
+      const tags = document.querySelectorAll(".project-tag .tag");
+      const tagCategories = {
+        domain: {},
+        concept: {},
+        tool: {}
+      };
+
+      // Count occurrences of each tag and sort them into categories
+      tags.forEach(tag => {
+        const category = tag.classList.contains("domain") ? "domain" : 
+                        tag.classList.contains("concept") ? "concept" : "tool";
+        
+        // Format the tag name for href (lowercase, no special characters, dashes for spaces)
+        const tagName = tag.textContent.trim();
+        const formattedHref = `_tags/${tagName.toLowerCase()
+          .replace(/[^a-z0-9\s]/g, "") // Remove special characters
+          .replace(/\s+/g, "-")}.html`; // Replace spaces with dashes and append .html
+
+        // Increment count or initialize
+        if (tagCategories[category][tagName]) {
+          tagCategories[category][tagName].count++;
+        } else {
+          tagCategories[category][tagName] = {
+            count: 1,
+            href: formattedHref // Use the formatted href
+          };
+        }
       });
+
+      // Populate Section 2 dynamically
+      const populateKnowledgeTags = (containerSelector, tags, category) => {
+        const container = document.querySelector(containerSelector);
+        container.innerHTML = ""; // Clear any pre-defined tags
+
+        // Create and append tags
+        Object.entries(tags).forEach(([tagName, tagData]) => {
+          const a = document.createElement("a");
+          a.href = tagData.href;
+          a.className = `tag ${category}`;
+          // Add count only if greater than 1
+          a.textContent = tagData.count > 1 ? `${tagName} (${tagData.count})` : tagName;
+          container.appendChild(a);
+        });
+      };
+
+      // Call the function for each category
+      populateKnowledgeTags(".knowledge-domain-tags .project-tag", tagCategories.domain, "domain");
+      populateKnowledgeTags(".knowledge-concept-tags .project-tag", tagCategories.concept, "concept");
+      populateKnowledgeTags(".knowledge-tool-tags .project-tag", tagCategories.tool, "tool");
+    });
     </script>
   </body>
 </html>
