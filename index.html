@@ -171,7 +171,7 @@
                     <p class="paragraph">Built a home lab featuring Wazuh for SIEM, an Active Directory domain, and iptables firewall to explore security monitoring and network defense.</p>
                   </div>
                   <div class="project-tag">
-                    <a href="_tags/netwo" class="tag domain">network defense</a>
+                    <a class="tag domain">network defense</a>
                     <a class="tag tool">Iptables</a>
                     <a class="tag tool">Wazuh</a>
                     <a class="tag tool">tcpdump</a>
@@ -232,7 +232,7 @@
         
         // Format the tag name for href (lowercase, no special characters, dashes for spaces)
         const tagName = tag.textContent.trim();
-        const formattedHref = `_tags/${tagName.toLowerCase()
+        const formattedHref = `-tags/${tagName.toLowerCase()
           .replace(/[^a-z0-9\s]/g, "") // Remove special characters
           .replace(/\s+/g, "-")}.html`; // Replace spaces with dashes and append .html
 
