@@ -1,6 +1,68 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CS Vault    ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://jamilosa.github.io/</link><image><url>https://jamilosa.github.io/lib/media/favicon.png</url><title>CS Vault    </title><link>https://jamilosa.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 17 Feb 2025 04:17:22 GMT</lastBuildDate><atom:link href="https://jamilosa.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 17 Feb 2025 04:17:22 GMT</pubDate><copyright><![CDATA[ryan-jamilosa]]></copyright><ttl>60</ttl><dc:creator>ryan-jamilosa</dc:creator><item><title><![CDATA[Initial Home Lab Setup]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CS Vault    ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://jamilosa.github.io/home/</link><image><url>https://jamilosa.github.io/home/lib/media/favicon.png</url><title>CS Vault    </title><link>https://jamilosa.github.io/home/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 18 Feb 2025 01:38:44 GMT</lastBuildDate><atom:link href="https://jamilosa.github.io/home/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 18 Feb 2025 01:38:43 GMT</pubDate><copyright><![CDATA[ryan-jamilosa]]></copyright><ttl>60</ttl><dc:creator>ryan-jamilosa</dc:creator><item><title><![CDATA[Courses on Coursera]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>Introduction to Cybersecurity Fundamentals
+<br>Introduction to Cybersecurity Essentials
+<br>The Foundations of Cybersecurity
+<br>Introduction to Cybersecurity Tools &amp; Cyberattacks
+<br>Operating Systems: Overview, Administration, and Security
+<br>Computer Networks and Network Security
+<br><br>
+<br>Cybersecurity Compliance Framework, Standards &amp; Regulations
+<br>NIST CSF
+<br>Network Security
+<br>Cybersecurity Architecture
+<br>
+
+
+<br><br>
+<br>Ethical Hacking Essentials (EHE)
+<br>Cyber Incident Response
+<br>Cybersecurity Assessment: CompTIA Security+ &amp; CYSA+
+<br><br>
+<br>Mitigating Security Vulnerabilities on Google Cloud
+<br>Google Cloud Fundamentals: Core Infrastructure
+<br>Managing Security in Google Cloud
+<br>Security Best Practices in Google Cloud
+<br><br>
+<br>Generative AI: Boost Your Cybersecurity Career
+]]></description><link>https://jamilosa.github.io/home/_notes/courses-on-coursera.html</link><guid isPermaLink="false">_notes/Courses on Coursera.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sat, 15 Feb 2025 23:27:02 GMT</pubDate></item><item><title><![CDATA[{{Title}}]]></title><description><![CDATA[ 
+ <br><br>Date: {{Date}}<br>
+Tags: [[]] [[]] [[]]<br><br><br>
+<br>Briefly explain what you’re doing and why.  
+<br>If relevant, mention a key concept (but keep it brief).  
+<br><br>
+<br>High-level overview of what will be discussed.  
+<br>Mention any specific focus (e.g., configurations, security tests, troubleshooting).  
+<br><br><br>
+<br>Diagram (if applicable)  
+<br>Devices, OS versions, key software used  
+<br><br>
+<br>Things already in place before this setup.  
+<br>Any assumptions about the setup.  
+<br><br><br>
+<br>This is NOT a step-by-step guide, but a summary of your approach.  
+<br>Write what you did, what worked, and what didn’t in a readable format.  
+<br><br>
+<br>What issues popped up?  
+<br>How did you troubleshoot and solve them?  
+<br>Any commands or configurations that were adjusted?  
+<br><br>
+<br>What patterns, behaviors, or unexpected results did you notice?  
+<br>How effective was the implementation?  
+<br><br>
+<br>Things to improve or optimize.  
+<br>Alternative approaches to try next time.  
+<br><br>
+<br>Final thoughts, main takeaways.  
+<br>What did you gain from this?  
+<br>]]></description><link>https://jamilosa.github.io/home/_templates/blog.html</link><guid isPermaLink="false">_templates/Blog.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Mon, 17 Feb 2025 05:32:58 GMT</pubDate></item><item><title><![CDATA[{{Title}}]]></title><description><![CDATA[ 
+ <br><br>Date: {{Date}}<br>
+Tags: [[]] [[]] [[]]<br><br><br><br><br>]]></description><link>https://jamilosa.github.io/home/_templates/note.html</link><guid isPermaLink="false">_templates/Note.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:07:46 GMT</pubDate></item><item><title><![CDATA[{{Title}}]]></title><description><![CDATA[ 
+ <br><br><br><br>
+<br>Note Here
+]]></description><link>https://jamilosa.github.io/home/_templates/tag.html</link><guid isPermaLink="false">_templates/Tag.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:26:26 GMT</pubDate></item><item><title><![CDATA[Initial Home Lab Setup]]></title><description><![CDATA[ 
  <br>Date: Feb 06, 2025<br>
-Tags: <a data-href="network defense" href="https://jamilosa.github.io/home/-tags/network-defense.html" class="internal-link" target="_self" rel="noopener nofollow">network defense</a> <a data-href="Active Directory" href="https://jamilosa.github.io/home/-tags/active-directory.html" class="internal-link" target="_self" rel="noopener nofollow">Active Directory</a>  <a data-href="Wazuh" href="https://jamilosa.github.io/home/-tags/wazuh.html" class="internal-link" target="_self" rel="noopener nofollow">Wazuh</a> <a data-href="SIEM" href="https://jamilosa.github.io/home/-tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a> <a data-href="iptables" href="https://jamilosa.github.io/home/-tags/iptables.html" class="internal-link" target="_self" rel="noopener nofollow">iptables</a> <a data-href="tcpdump" href="https://jamilosa.github.io/home/-tags/tcpdump.html" class="internal-link" target="_self" rel="noopener nofollow">tcpdump</a> <a data-href="firewall" href="https://jamilosa.github.io/home/-tags/firewall.html" class="internal-link" target="_self" rel="noopener nofollow">firewall</a> <a data-href="port forwarding" href="https://jamilosa.github.io/home/-tags/port-forwarding.html" class="internal-link" target="_self" rel="noopener nofollow">port forwarding</a> <a data-href="log" href="https://jamilosa.github.io/home/-tags/log.html" class="internal-link" target="_self" rel="noopener nofollow">log</a><br><br><br><br>Setting up a home lab provides a controlled environment to simulate cyber attacks, test defenses, and develop mitigation strategies. It enhances hands-on cybersecurity skills, making it a powerful tool for learning and experimentation.<br>In this entry, I'm refining my home lab setup, focusing on Wazuh as a SIEM that collects security events from a firewall and multiple endpoint devices.<br><br>
+Tags: <a data-href="network defense" href="https://jamilosa.github.io/home/tags/network-defense.html" class="internal-link" target="_self" rel="noopener nofollow">network defense</a> <a data-href="Active Directory" href="https://jamilosa.github.io/home/tags/active-directory.html" class="internal-link" target="_self" rel="noopener nofollow">Active Directory</a>  <a data-href="Wazuh" href="https://jamilosa.github.io/home/tags/wazuh.html" class="internal-link" target="_self" rel="noopener nofollow">Wazuh</a> <a data-href="SIEM" href="https://jamilosa.github.io/home/tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a> <a data-href="iptables" href="https://jamilosa.github.io/home/tags/iptables.html" class="internal-link" target="_self" rel="noopener nofollow">iptables</a> <a data-href="tcpdump" href="https://jamilosa.github.io/home/tags/tcpdump.html" class="internal-link" target="_self" rel="noopener nofollow">tcpdump</a> <a data-href="firewall" href="https://jamilosa.github.io/home/tags/firewall.html" class="internal-link" target="_self" rel="noopener nofollow">firewall</a> <a data-href="port forwarding" href="https://jamilosa.github.io/home/tags/port-forwarding.html" class="internal-link" target="_self" rel="noopener nofollow">port forwarding</a> <a data-href="log" href="https://jamilosa.github.io/home/tags/log.html" class="internal-link" target="_self" rel="noopener nofollow">log</a><br><br><br><br>Setting up a home lab provides a controlled environment to simulate cyber attacks, test defenses, and develop mitigation strategies. It enhances hands-on cybersecurity skills, making it a powerful tool for learning and experimentation.<br>In this entry, I'm refining my home lab setup, focusing on Wazuh as a SIEM that collects security events from a firewall and multiple endpoint devices.<br><br>
 <br>Deploying Wazuh on Docker by following official documentation 
 <br>Setting up Active Directory (Windows Server 2022)
 <br>Configuring AntiX as a firewall (iptables, NAT, port forwarding, logging)
@@ -99,72 +161,82 @@ Figure 20: Blocked HTTP traffic logged in&nbsp;/var/log/iptables.log.<br><br>
 <br><a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Netfilter" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/Netfilter" target="_blank">Netfilter - Wikipedia</a>
 <br><a data-tooltip-position="top" aria-label="https://tecadmin.net/enable-logging-in-iptables-on-linux/" rel="noopener nofollow" class="external-link" href="https://tecadmin.net/enable-logging-in-iptables-on-linux/" target="_blank">Enabling Logging in Iptables on Linux: A Beginner's Guide – TecAdmin</a>
 <br><a data-tooltip-position="top" aria-label="https://www.networkinghowtos.com/howto/change-the-iptables-log-file/#:~:text=If%20you%20want%20to%20change%20the%20file%20that,log%20file%2C%20containing%20just%20the%20iptables%20log%20information." rel="noopener nofollow" class="external-link" href="https://www.networkinghowtos.com/howto/change-the-iptables-log-file/#:~:text=If%20you%20want%20to%20change%20the%20file%20that,log%20file%2C%20containing%20just%20the%20iptables%20log%20information." target="_blank">Change the IPTables log file - Networking HowTos</a>
-]]></description><link>https://jamilosa.github.io/home/projects/initial-home-lab-setup.html</link><guid isPermaLink="false">Projects/Initial Home Lab Setup.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Mon, 17 Feb 2025 04:15:08 GMT</pubDate><enclosure url="https://jamilosa.github.io/home/lib/media/initial-home-lab-configuration1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://jamilosa.github.io/home/lib/media/initial-home-lab-configuration1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Courses on Coursera]]></title><description><![CDATA[ 
- <br><br><br>
-<br>Introduction to Cybersecurity Fundamentals
-<br>Introduction to Cybersecurity Essentials
-<br>The Foundations of Cybersecurity
-<br>Introduction to Cybersecurity Tools &amp; Cyberattacks
-<br>Operating Systems: Overview, Administration, and Security
-<br>Computer Networks and Network Security
+]]></description><link>https://jamilosa.github.io/home/projects/initial-home-lab-setup.html</link><guid isPermaLink="false">Projects/Initial Home Lab Setup.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Tue, 18 Feb 2025 00:07:57 GMT</pubDate><enclosure url="https://jamilosa.github.io/home/lib/media/initial-home-lab-configuration1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://jamilosa.github.io/home/lib/media/initial-home-lab-configuration1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Sending Firewall Logs to SIEM]]></title><description><![CDATA[ 
+ <br><br>Date: Feb 17, 2025<br>
+Tags: <a data-href="rsyslog" href="https://jamilosa.github.io/home/tags/rsyslog.html" class="internal-link" target="_self" rel="noopener nofollow">rsyslog</a> <a data-href="log forwarding" href="https://jamilosa.github.io/home/log forwarding" class="internal-link" target="_self" rel="noopener nofollow">log forwarding</a> <a data-href="log" href="https://jamilosa.github.io/home/tags/log.html" class="internal-link" target="_self" rel="noopener nofollow">log</a> <a data-href="decoded" href="https://jamilosa.github.io/home/decoded" class="internal-link" target="_self" rel="noopener nofollow">decoded</a> <a data-href="SIEM" href="https://jamilosa.github.io/home/tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a><br><br><br>Most organizations use multiple network security devices to monitor and control traffic. These devices generate logs that provide visibility into network activity and potential security threats. Firewalls, for example, enforce access control rules but also log traffic events for further analysis.<br>In my previous entry, <a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>, I configured my home lab firewall (iptables) to generate logs. However, a challenge arises when multiple devices produce logs. It requires administrators to manually review and analyze them across different systems.<br>To address this, I will configure my firewall (iptables) to forward logs to my SIEM (Wazuh). Although this benefit may not be immediately obvious in a small setup like mine, centralizing logs helps in efficient security monitoring by providing a unified view of activity across hosts and security devices.<br><br>
+<br>Understanding the structure of iptables logs
+<br>Creating an iptables log decoder
+<br>Enabling log forwarding via rsyslog
+<br>Configuring Wazuh to receive and process rsyslog logs
+<br><br><br><img alt="Pasted image 20250217145339.png" src="https://jamilosa.github.io/home/lib/media/pasted-image-20250217145339.png"><br>
+Figure 1: Network setup and log flow.<br><br><br>
+<br>A Wazuh server (pre-installed and running)
+<br>An Iptables-based firewall with logging enabled
+<br>Rsyslog configured to collect iptables logs
+<br>Configuration Assumptions:<br><br><br><br><br>To analyze the structure of iptables logs, I extracted one entry from /var/log/iptables.log that iptables generated using the rules that it was configured to (see Figure 2).<br>2025-02-11T15:08:50.772311+08:00 antix-firewall kernel: [ 6710.927406] HTTP TRAFFICIN=lan0 OUT=wan0 MAC=00:e0:4c:36:06:d7:30:16:9d:72:51:2b:08:00 SRC=10.0.0.2 DST=146.190.62.39 LEN=60 TOS=0x00 PREC=0x00 TTL=62 ID=58673 DF PROTO=TCP SPT=60464 DPT=80 WINDOW=64240 RES=0x00 SYN URGP=0
+<br>I placed them on a table to get a closer look on what information are on the log:<br><br><img alt="Pasted image 20250211145608.png" src="https://jamilosa.github.io/home/lib/media/pasted-image-20250211145608.png"><br>
+Figure 2: Iptables rules logging and blocking HTTP traffic on wan0 interface.<br><br>Looking at it now, There is no value that corresponds with the --log-level 4 on the firewall rule  on the logs generated by iptables. One solution is to add it in the log prefix (see Figure 3). <br>Log Prefix was updated from "DESCRIPTION" to "_LVL=LEVEL _ACT=ACTION DESCRIPTION"<br>With these, we can add additional data on the table:<br><br>Syslog Levels (High Number = Less Severe):<br>0 = Emergency (System unusable) 
+1 = Alert (Immediate action required) 
+2 = Critical (Serious failure) 
+3 = Error (Problem detected) 
+4 = Warning (Potential issue) 
+5 = Notice (Important but not an error) 
+6 = Informational (General logs) 
+7 = Debug (Troubleshooting details)
+<br><img alt="Pasted image 20250217195832.png" src="https://jamilosa.github.io/home/lib/media/pasted-image-20250217195832.png"><br>
+Figure 3: Updated iptables log prefix to include the log levels.<br><br><br>
+<br>What issues popped up?  
+<br>How did you troubleshoot and solve them?  
+<br>Any commands or configurations that were adjusted?  
 <br><br>
-<br>Cybersecurity Compliance Framework, Standards &amp; Regulations
-<br>NIST CSF
-<br>Network Security
-<br>Cybersecurity Architecture
-<br>
-
-
+<br>What patterns, behaviors, or unexpected results did you notice?  
+<br>How effective was the implementation?  
 <br><br>
-<br>Ethical Hacking Essentials (EHE)
-<br>Cyber Incident Response
-<br>Cybersecurity Assessment: CompTIA Security+ &amp; CYSA+
+<br>Things to improve or optimize.  
+<br>Alternative approaches to try next time.  
 <br><br>
-<br>Mitigating Security Vulnerabilities on Google Cloud
-<br>Google Cloud Fundamentals: Core Infrastructure
-<br>Managing Security in Google Cloud
-<br>Security Best Practices in Google Cloud
-<br><br>
-<br>Generative AI: Boost Your Cybersecurity Career
-]]></description><link>https://jamilosa.github.io/home/-notes/courses-on-coursera.html</link><guid isPermaLink="false">-notes/Courses on Coursera.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sat, 15 Feb 2025 23:27:02 GMT</pubDate></item><item><title><![CDATA[Active Directory]]></title><description><![CDATA[ 
+<br>Final thoughts, main takeaways.  
+<br>What did you gain from this?  
+<br><br><a data-tooltip-position="top" aria-label="https://linuxreviews.org/Type_of_Service_(ToS)_and_DSCP_Values" rel="noopener nofollow" class="external-link" href="https://linuxreviews.org/Type_of_Service_(ToS)_and_DSCP_Values" target="_blank">Type of Service (ToS) and DSCP Values - LinuxReviews</a><br>
+<a data-tooltip-position="top" aria-label="https://serverfault.com/questions/463397/understanding-log-messages-from-iptables" rel="noopener nofollow" class="external-link" href="https://serverfault.com/questions/463397/understanding-log-messages-from-iptables" target="_blank">logging - Understanding log messages from iptables - Server Fault</a>]]></description><link>https://jamilosa.github.io/home/projects/sending-firewall-logs-to-siem.html</link><guid isPermaLink="false">Projects/Sending Firewall Logs to SIEM.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Mon, 17 Feb 2025 12:14:57 GMT</pubDate><enclosure url="https://jamilosa.github.io/home/lib/media/pasted-image-20250217145339.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://jamilosa.github.io/home/lib/media/pasted-image-20250217145339.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Active Directory]]></title><description><![CDATA[ 
  <br><br><br>A directory is a hierarchical structure that stores information about objects on the network. A directory service, such as Active Directory Domain Services (AD DS), provides the methods for storing directory data and making this data available to network users and administrators.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/active-directory.html</link><guid isPermaLink="false">-tags/Active Directory.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:48:06 GMT</pubDate></item><item><title><![CDATA[firewall]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/active-directory.html</link><guid isPermaLink="false">Tags/Active Directory.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:48:06 GMT</pubDate></item><item><title><![CDATA[firewall]]></title><description><![CDATA[ 
  <br><br><br>A firewall is a network security device either hardware or software-based which monitors all incoming and outgoing traffic and based on a defined set of security rules it accepts, rejects, or drops that specific traffic. It acts like a security guard that helps keep your digital world safe from unwanted visitors and potential threats.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/firewall.html</link><guid isPermaLink="false">-tags/firewall.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:27:25 GMT</pubDate></item><item><title><![CDATA[iptables]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/firewall.html</link><guid isPermaLink="false">Tags/firewall.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:27:25 GMT</pubDate></item><item><title><![CDATA[iptables]]></title><description><![CDATA[ 
  <br><br><br>Iptables is a powerful tool that acts as a firewall by interfacing netfilter, which is a Linux kernel module responsible for deciding which packets are allowed to go in or out of a system. <br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/iptables.html</link><guid isPermaLink="false">-tags/iptables.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:40:47 GMT</pubDate></item><item><title><![CDATA[log]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/iptables.html</link><guid isPermaLink="false">Tags/iptables.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:40:47 GMT</pubDate></item><item><title><![CDATA[log]]></title><description><![CDATA[ 
  <br><br><br>Log is a detailed list of an application information, system performance, or user activities. A&nbsp;log&nbsp;can be useful for tracking computer use, emergency recovery, and application improvement. Each program that can create a log has different methods of starting or stopping the log creation.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/log.html</link><guid isPermaLink="false">-tags/log.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:33:42 GMT</pubDate></item><item><title><![CDATA[network defense]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/log.html</link><guid isPermaLink="false">Tags/log.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:33:42 GMT</pubDate></item><item><title><![CDATA[network defense]]></title><description><![CDATA[ 
  <br><br><br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
-]]></description><link>https://jamilosa.github.io/home/-tags/network-defense.html</link><guid isPermaLink="false">-tags/network defense.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:58:29 GMT</pubDate></item><item><title><![CDATA[port forwarding]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/network-defense.html</link><guid isPermaLink="false">Tags/network defense.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:58:29 GMT</pubDate></item><item><title><![CDATA[port forwarding]]></title><description><![CDATA[ 
  <br><br><br>Port forwarding, sometimes called port mapping, allows computers or services in private networks to connect over the internet with other public or private computers or services.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
-]]></description><link>https://jamilosa.github.io/home/-tags/port-forwarding.html</link><guid isPermaLink="false">-tags/port forwarding.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:32:31 GMT</pubDate></item><item><title><![CDATA[SIEM]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/port-forwarding.html</link><guid isPermaLink="false">Tags/port forwarding.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:32:31 GMT</pubDate></item><item><title><![CDATA[rsyslog]]></title><description><![CDATA[ 
+ <br><br><br>The Rocket-fast System for log processing (rsyslog)&nbsp;is a system utility provided in Linux which provides support for message logging. It offers high performance and comes with excellent security and has a modular design. This is a very useful utility that can accept input from a wide variety of sources and transform them and store them in multiple and diverse destinations.<br><br>
+<br><a data-href="Sending Firewall Logs to SIEM" href="https://jamilosa.github.io/home/projects/sending-firewall-logs-to-siem.html" class="internal-link" target="_self" rel="noopener nofollow">Sending Firewall Logs to SIEM</a>
+]]></description><link>https://jamilosa.github.io/home/tags/rsyslog.html</link><guid isPermaLink="false">Tags/rsyslog.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Mon, 17 Feb 2025 06:05:02 GMT</pubDate></item><item><title><![CDATA[SIEM]]></title><description><![CDATA[ 
  <br><br><br>SIEM stands for security information and event management, a system that collects and analyzes data from multiple sources to detect and respond to threats.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/siem.html</link><guid isPermaLink="false">-tags/SIEM.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:31:22 GMT</pubDate></item><item><title><![CDATA[tcpdump]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/siem.html</link><guid isPermaLink="false">Tags/SIEM.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:31:22 GMT</pubDate></item><item><title><![CDATA[tcpdump]]></title><description><![CDATA[ 
  <br><br><br>Tcpdump&nbsp;is a powerful command-line utility used to capture and inspect network traffic. It is widely used by network administrators for troubleshooting network issues and security testing. Despite its name, tcpdump can capture non-TCP traffic such as UDP, ARP, or ICMP.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/tcpdump.html</link><guid isPermaLink="false">-tags/tcpdump.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:29:58 GMT</pubDate></item><item><title><![CDATA[Wazuh]]></title><description><![CDATA[ 
- <br><br><br>Wazuh is a free and open source security platform that unifies XDR and <a data-href="SIEM" href="https://jamilosa.github.io/home/-tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a> capabilities. It protects workloads across on-premises, virtualized, containerized, and cloud-based environments.<br>Wazuh helps organizations and individuals to protect their data assets against security threats. It is widely used by thousands of organizations worldwide, from small businesses to large enterprises.<br><br>
+]]></description><link>https://jamilosa.github.io/home/tags/tcpdump.html</link><guid isPermaLink="false">Tags/tcpdump.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:29:58 GMT</pubDate></item><item><title><![CDATA[Wazuh]]></title><description><![CDATA[ 
+ <br><br><br>Wazuh is a free and open source security platform that unifies XDR and <a data-href="SIEM" href="https://jamilosa.github.io/home/tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a> capabilities. It protects workloads across on-premises, virtualized, containerized, and cloud-based environments.<br>Wazuh helps organizations and individuals to protect their data assets against security threats. It is widely used by thousands of organizations worldwide, from small businesses to large enterprises.<br><br>
 <br><a data-href="Initial Home Lab Setup" href="https://jamilosa.github.io/home/projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>
 <br>
-]]></description><link>https://jamilosa.github.io/home/-tags/wazuh.html</link><guid isPermaLink="false">-tags/Wazuh.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:29:11 GMT</pubDate></item><item><title><![CDATA[{{Title}}]]></title><description><![CDATA[ 
- <br><br>Date: {{Date}}<br>
-Tags: [[]] [[]] [[]]<br><br><br><br><br>]]></description><link>https://jamilosa.github.io/home/-templates/note.html</link><guid isPermaLink="false">-templates/Note.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:07:46 GMT</pubDate></item><item><title><![CDATA[{{Title}}]]></title><description><![CDATA[ 
- <br><br><br><br>
-<br>Note Here
-]]></description><link>https://jamilosa.github.io/home/-templates/tag.html</link><guid isPermaLink="false">-templates/Tag.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 05:26:26 GMT</pubDate></item><item><title><![CDATA[CIA Triad]]></title><description><![CDATA[ 
+]]></description><link>https://jamilosa.github.io/home/tags/wazuh.html</link><guid isPermaLink="false">Tags/Wazuh.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Sun, 16 Feb 2025 12:29:11 GMT</pubDate></item><item><title><![CDATA[Untitled]]></title><description><![CDATA[ 
+ <br>UPDATED]]></description><link>https://jamilosa.github.io/home/untitled.html</link><guid isPermaLink="false">Untitled.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Tue, 18 Feb 2025 01:35:35 GMT</pubDate></item><item><title><![CDATA[Untitled 1]]></title><description><![CDATA[ 
+ ]]></description><link>https://jamilosa.github.io/home/untitled-1.html</link><guid isPermaLink="false">Untitled 1.md</guid><dc:creator><![CDATA[ryan-jamilosa]]></dc:creator><pubDate>Mon, 17 Feb 2025 07:18:32 GMT</pubDate></item><item><title><![CDATA[CIA Triad]]></title><description><![CDATA[ 
  <br><br>Date: Feb 16, 2025<br>
 Tags: <a data-href="Confidentiality" href="https://jamilosa.github.io/home/Confidentiality" class="internal-link" target="_self" rel="noopener nofollow">Confidentiality</a> <a data-href="Integrity" href="https://jamilosa.github.io/home/Integrity" class="internal-link" target="_self" rel="noopener nofollow">Integrity</a> <a data-href="Availability" href="https://jamilosa.github.io/home/Availability" class="internal-link" target="_self" rel="noopener nofollow">Availability</a><br><br><br><br><br>]]></description><link>https://jamilosa.github.io/home/notes/cia-triad.html</link><guid isPermaLink="false">Notes/CIA Triad.md</guid><pubDate>Sun, 16 Feb 2025 05:05:40 GMT</pubDate></item></channel></rss>

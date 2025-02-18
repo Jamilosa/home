@@ -232,7 +232,7 @@
         
         // Format the tag name for href (lowercase, no special characters, dashes for spaces)
         const tagName = tag.textContent.trim();
-        const formattedHref = `-tags/${tagName.toLowerCase()
+        const formattedHref = `_tags/${tagName.toLowerCase()
           .replace(/[^a-z0-9\s]/g, "") // Remove special characters
           .replace(/\s+/g, "-")}.html`; // Replace spaces with dashes and append .html
 

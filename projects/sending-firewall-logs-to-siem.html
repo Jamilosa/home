@@ -1,0 +1,210 @@
+<!DOCTYPE html> <html><head>
+		<title>Sending Firewall Logs to SIEM</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="CS Vault     - Sending Firewall Logs to SIEM">
+		<meta property="og:title" content="Sending Firewall Logs to SIEM">
+		<meta property="og:description" content="CS Vault     - Sending Firewall Logs to SIEM">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://jamilosa.github.io/home/projects/sending-firewall-logs-to-siem.html">
+		<meta property="og:image" content="https://jamilosa.github.io/home/lib/media/pasted-image-20250217145339.png">
+		<meta property="og:site_name" content="CS Vault    ">
+		<meta name="author" content="ryan-jamilosa"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://jamilosa.github.io/home/lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><include src="lib/html/custom-head-content.html"></include><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-dark show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="Sending Firewall Logs to SIEM">Sending Firewall Logs to SIEM</h1><div class="el-h1 heading-wrapper"><div class="heading-children"><div class="el-p"><p dir="auto">Date: Feb 17, 2025<br>
+Tags: <a data-href="rsyslog" href="tags/rsyslog.html" class="internal-link" target="_self" rel="noopener nofollow">rsyslog</a> <a data-href="log forwarding" href="log forwarding" class="internal-link" target="_self" rel="noopener nofollow">log forwarding</a> <a data-href="log" href="tags/log.html" class="internal-link" target="_self" rel="noopener nofollow">log</a> <a data-href="decoded" href="decoded" class="internal-link" target="_self" rel="noopener nofollow">decoded</a> <a data-href="SIEM" href="tags/siem.html" class="internal-link" target="_self" rel="noopener nofollow">SIEM</a></p></div><div class="el-h2 heading-wrapper"><h2 data-heading="I. Introduction" dir="auto" class="heading" id="I._Introduction"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>I. Introduction</h2><div class="heading-children"><div class="el-h3 heading-wrapper"><h3 data-heading="1.1 Context &amp; Purpose" dir="auto" class="heading" id="1.1_Context_&amp;_Purpose"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1.1 Context &amp; Purpose</h3><div class="heading-children"><div class="el-p"><p dir="auto">Most organizations use multiple network security devices to monitor and control traffic. These devices generate logs that provide visibility into network activity and potential security threats. Firewalls, for example, enforce access control rules but also log traffic events for further analysis.</p></div><div class="el-p"><p dir="auto">In my previous entry, <a data-href="Initial Home Lab Setup" href="projects/initial-home-lab-setup.html" class="internal-link" target="_self" rel="noopener nofollow">Initial Home Lab Setup</a>, I configured my home lab firewall (iptables) to generate logs. However, a challenge arises when multiple devices produce logs. It requires administrators to manually review and analyze them across different systems.</p></div><div class="el-p"><p dir="auto">To address this, I will configure my firewall (iptables) to forward logs to my SIEM (Wazuh). Although this benefit may not be immediately obvious in a small setup like mine, centralizing logs helps in efficient security monitoring by providing a unified view of activity across hosts and security devices.</p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="1.2 What This Covers" dir="auto" class="heading" id="1.2_What_This_Covers"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1.2 What This Covers</h3><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Understanding the structure of iptables logs</li>
+<li data-line="1" dir="auto">Creating an iptables log decoder</li>
+<li data-line="2" dir="auto">Enabling log forwarding via rsyslog</li>
+<li data-line="3" dir="auto">Configuring Wazuh to receive and process rsyslog logs</li>
+</ul></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="II. Setup &amp; Environment" dir="auto" class="heading" id="II._Setup_&amp;_Environment"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>II. Setup &amp; Environment</h2><div class="heading-children"><div class="el-h5 heading-wrapper"><h5 data-heading="2.1 Network &amp; Tools Overview" dir="auto" class="heading" id="2.1_Network_&amp;_Tools_Overview"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2.1 Network &amp; Tools Overview</h5><div class="heading-children"><div class="el-p"><p dir="auto"><span alt="Pasted image 20250217145339.png" src="Pasted image 20250217145339.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250217145339.png" src="lib/media/pasted-image-20250217145339.png"></span><br>
+Figure 1: Network setup and log flow.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Host</th>
+<th dir="ltr">Role</th>
+<th dir="ltr">Application / Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Ubuntu</td>
+<td dir="ltr">SIEM / Log receiver</td>
+<td dir="ltr">Wazuh server</td>
+</tr>
+<tr>
+<td dir="ltr">User</td>
+<td dir="ltr">Client machine</td>
+<td dir="ltr">Web browser</td>
+</tr>
+<tr>
+<td dir="ltr">Firewall</td>
+<td dir="ltr">Security Gateway</td>
+<td dir="ltr">Iptables, Rsyslog</td>
+</tr>
+</tbody>
+</table></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="2.2 Prerequisites" dir="auto" class="heading" id="2.2_Prerequisites"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2.2 Prerequisites</h5><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">A Wazuh server (pre-installed and running)</li>
+<li data-line="1" dir="auto">An Iptables-based firewall with logging enabled</li>
+<li data-line="2" dir="auto">Rsyslog configured to collect iptables logs</li>
+</ul></div><div class="el-p"><p dir="auto">Configuration Assumptions:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Component</th>
+<th dir="ltr">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Wazuh Server</td>
+<td dir="ltr"><code>IP: 10.0.0.2</code></td>
+</tr>
+<tr>
+<td dir="ltr">Firewall</td>
+<td dir="ltr"><code>IP: 10.0.1.1</code></td>
+</tr>
+<tr>
+<td dir="ltr">Firewall log path</td>
+<td dir="ltr"><code>/var/log/iptables.log</code></td>
+</tr>
+</tbody>
+</table></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="III. Execution &amp; Findings" dir="auto" class="heading" id="III._Execution_&amp;_Findings"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>III. Execution &amp; Findings</h2><div class="heading-children"><div class="el-h5 heading-wrapper"><h5 data-heading="3.1 Iptables Log Structure" dir="auto" class="heading" id="3.1_Iptables_Log_Structure"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.1 Iptables Log Structure</h5><div class="heading-children"><div class="el-h6 heading-wrapper"><h6 data-heading="3.1.1 Current Iptables Log" dir="auto" class="heading" id="3.1.1_Current_Iptables_Log"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.1.1 Current Iptables Log</h6><div class="heading-children"><div class="el-p"><p dir="auto">To analyze the structure of iptables logs, I extracted one entry from <code>/var/log/iptables.log</code> that iptables generated using the rules that it was configured to (see Figure 2).</p></div><div class="el-pre"><pre><code data-line="0">2025-02-11T15:08:50.772311+08:00 antix-firewall kernel: [ 6710.927406] HTTP TRAFFICIN=lan0 OUT=wan0 MAC=00:e0:4c:36:06:d7:30:16:9d:72:51:2b:08:00 SRC=10.0.0.2 DST=146.190.62.39 LEN=60 TOS=0x00 PREC=0x00 TTL=62 ID=58673 DF PROTO=TCP SPT=60464 DPT=80 WINDOW=64240 RES=0x00 SYN URGP=0
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">I placed them on a table to get a closer look on what information are on the log:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Data</th>
+<th dir="ltr">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>2025-02-11T15:08:50.772311+08:00</code></td>
+<td dir="ltr">Timestamp when the log was generated</td>
+</tr>
+<tr>
+<td dir="ltr"><code>antix-firewall</code></td>
+<td dir="ltr">Hostname, Indicates the host where the log was generated.</td>
+</tr>
+<tr>
+<td dir="ltr"><code>kernel: [ 6710.927406]</code></td>
+<td dir="ltr">Kernel timestamp (time after the system was booted)</td>
+</tr>
+<tr>
+<td dir="ltr"><code>HTTP TRAFFIC</code></td>
+<td dir="ltr">Log prefix / description assigned by the administrator.</td>
+</tr>
+<tr>
+<td dir="ltr"><code>IN=lan0</code></td>
+<td dir="ltr">Interface where the packet was received</td>
+</tr>
+<tr>
+<td dir="ltr"><code>OUT=wan0</code></td>
+<td dir="ltr">Interface where the packet should be forwarded</td>
+</tr>
+<tr>
+<td dir="ltr"><code>MAC=00:e0:4c:36:06:d7:30:16:9d:72:51:2b:08:00</code></td>
+<td dir="ltr">MAC addresses (<code>dst-mac-lan0</code>:<code>src-mac-router</code>:<code>08:00</code>)</td>
+</tr>
+<tr>
+<td dir="ltr"><code>SRC=10.0.0.2</code></td>
+<td dir="ltr">Source IP address</td>
+</tr>
+<tr>
+<td dir="ltr"><code>DST=146.190.62.39</code></td>
+<td dir="ltr">Destination IP address</td>
+</tr>
+<tr>
+<td dir="ltr"><code>LEN=60</code></td>
+<td dir="ltr">Length in bytes</td>
+</tr>
+<tr>
+<td dir="ltr"><code>TOS=0x00</code></td>
+<td dir="ltr">Type of Service, Normal Service (0x00)</td>
+</tr>
+<tr>
+<td dir="ltr"><code>PREC=0x00</code></td>
+<td dir="ltr">The Precedence of the IP packet</td>
+</tr>
+<tr>
+<td dir="ltr"><code>TTL=62</code></td>
+<td dir="ltr">Time to Live</td>
+</tr>
+<tr>
+<td dir="ltr"><code>ID=58673</code></td>
+<td dir="ltr">The id of the IP packet.</td>
+</tr>
+<tr>
+<td dir="ltr"><code>DF</code></td>
+<td dir="ltr">Fragment Flags (<code>DF</code> don't fragment)</td>
+</tr>
+<tr>
+<td dir="ltr"><code>PROTO=TCP</code></td>
+<td dir="ltr">Protocol used was <code>TCP</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>SPT=60464</code></td>
+<td dir="ltr">Source port. Randomly generated by the client.</td>
+</tr>
+<tr>
+<td dir="ltr"><code>DPT=80</code></td>
+<td dir="ltr">Destination port is 80. It indicates that it is an <code>HTTP</code> packet</td>
+</tr>
+<tr>
+<td dir="ltr"><code>WINDOW=64240</code></td>
+<td dir="ltr">TCP window size. It indicates how many bytes the sender can receive before needing an acknowledgment.</td>
+</tr>
+<tr>
+<td dir="ltr"><code>RES=0x00</code></td>
+<td dir="ltr">Reserved bits in the TCP header</td>
+</tr>
+<tr>
+<td dir="ltr"><code>SYN</code></td>
+<td dir="ltr">TCP flag indicating the start of TCP handshake</td>
+</tr>
+<tr>
+<td dir="ltr"><code>URGP=0</code></td>
+<td dir="ltr">The urgent pointer in the TCP header. Indicates urgent data.</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250211145608.png" src="Pasted image 20250211145608.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250211145608.png" src="lib/media/pasted-image-20250211145608.png"></span><br>
+Figure 2: Iptables rules logging and blocking HTTP traffic on <code>wan0</code> interface.</p></div></div></div><div class="el-h6 heading-wrapper"><h6 data-heading="3.1.2 Updated Iptables log" dir="auto" class="heading" id="3.1.2_Updated_Iptables_log"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.1.2 Updated Iptables log</h6><div class="heading-children"><div class="el-p"><p dir="auto">Looking at it now, There is no value that corresponds with the <code>--log-level 4</code> on the firewall rule  on the logs generated by iptables. One solution is to add it in the log prefix (see Figure 3). </p></div><div class="el-p"><p dir="auto">Log Prefix was updated from <code>"DESCRIPTION"</code> to <code>"_LVL=LEVEL _ACT=ACTION DESCRIPTION"</code></p></div><div class="el-p"><p dir="auto">With these, we can add additional data on the table:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Data</th>
+<th dir="ltr">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>_LVL=4</code></td>
+<td dir="ltr">Log Level (see Syslog Levels)</td>
+</tr>
+<tr>
+<td dir="ltr"><code>_ACT=DROP</code></td>
+<td dir="ltr">The action performed by the firewall (ACCEPT/DROP/REJECT)</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><strong>Syslog Levels</strong> (High Number = Less Severe):</p></div><div class="el-pre"><pre><code data-line="0">0 = Emergency (System unusable) 
+1 = Alert (Immediate action required) 
+2 = Critical (Serious failure) 
+3 = Error (Problem detected) 
+4 = Warning (Potential issue) 
+5 = Notice (Important but not an error) 
+6 = Informational (General logs) 
+7 = Debug (Troubleshooting details)
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250217195832.png" src="Pasted image 20250217195832.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250217195832.png" src="lib/media/pasted-image-20250217195832.png"></span><br>
+Figure 3: Updated iptables log prefix to include the log levels.</p></div></div></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="3.2 Wazuh Decoder" dir="auto" class="heading" id="3.2_Wazuh_Decoder"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.2 Wazuh Decoder</h5><div class="heading-children"></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="3.2 Challenges &amp; Fixes" dir="auto" class="heading" id="3.2_Challenges_&amp;_Fixes"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.2 Challenges &amp; Fixes</h5><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><strong>What issues popped up?</strong>  </li>
+<li data-line="1" dir="auto">How did you troubleshoot and solve them?  </li>
+<li data-line="2" dir="auto">Any commands or configurations that were adjusted?  </li>
+</ul></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="IV. Observations &amp; Insights" dir="auto" class="heading" id="IV._Observations_&amp;_Insights"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>IV. Observations &amp; Insights</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">What patterns, behaviors, or unexpected results did you notice?  </li>
+<li data-line="1" dir="auto">How effective was the implementation?  </li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="V. Considerations &amp; Next Steps" dir="auto" class="heading" id="V._Considerations_&amp;_Next_Steps"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>V. Considerations &amp; Next Steps</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Things to improve or optimize.  </li>
+<li data-line="1" dir="auto">Alternative approaches to try next time.  </li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="VI. Conclusion" dir="auto" class="heading" id="VI._Conclusion"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>VI. Conclusion</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Final thoughts, main takeaways.  </li>
+<li data-line="1" dir="auto">What did you gain from this?  </li>
+</ul></div></div></div></div></div><div class="el-h1 heading-wrapper"><h1 data-heading="References (if any)" dir="auto" class="heading" id="References_(if_any)">References (if any)</h1><div class="heading-children"><div class="el-p"><p dir="auto"><a data-tooltip-position="top" aria-label="https://linuxreviews.org/Type_of_Service_(ToS)_and_DSCP_Values" rel="noopener nofollow" class="external-link" href="https://linuxreviews.org/Type_of_Service_(ToS)_and_DSCP_Values" target="_blank">Type of Service (ToS) and DSCP Values - LinuxReviews</a><br>
+<a data-tooltip-position="top" aria-label="https://serverfault.com/questions/463397/understanding-log-messages-from-iptables" rel="noopener nofollow" class="external-link" href="https://serverfault.com/questions/463397/understanding-log-messages-from-iptables" target="_blank">logging - Understanding log messages from iptables - Server Fault</a></p></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#Sending Firewall Logs to SIEM"><div class="tree-item-contents heading-link" heading-name="Sending Firewall Logs to SIEM"><span class="tree-item-title">Sending Firewall Logs to SIEM</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item mod-collapsible is-collapsed" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#I._Introduction"><div class="tree-item-contents heading-link" heading-name="I. Introduction"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">I. Introduction</span></div></a><div class="tree-item-children nav-folder-children" style="display: none;"><div class="tree-item" data-depth="3"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#1.1_Context_&amp;_Purpose"><div class="tree-item-contents heading-link" heading-name="1.1 Context &amp; Purpose"><span class="tree-item-title">1.1 Context &amp; Purpose</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#1.2_What_This_Covers"><div class="tree-item-contents heading-link" heading-name="1.2 What This Covers"><span class="tree-item-title">1.2 What This Covers</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible is-collapsed" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#II._Setup_&amp;_Environment"><div class="tree-item-contents heading-link" heading-name="II. Setup &amp; Environment"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">II. Setup &amp; Environment</span></div></a><div class="tree-item-children nav-folder-children" style="display: none;"><div class="tree-item" data-depth="5"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#2.1_Network_&amp;_Tools_Overview"><div class="tree-item-contents heading-link" heading-name="2.1 Network &amp; Tools Overview"><span class="tree-item-title">2.1 Network &amp; Tools Overview</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#2.2_Prerequisites"><div class="tree-item-contents heading-link" heading-name="2.2 Prerequisites"><span class="tree-item-title">2.2 Prerequisites</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible is-collapsed" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#III._Execution_&amp;_Findings"><div class="tree-item-contents heading-link" heading-name="III. Execution &amp; Findings"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">III. Execution &amp; Findings</span></div></a><div class="tree-item-children nav-folder-children" style="display: none;"><div class="tree-item" data-depth="5"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#3.1_Iptables_Log_Structure"><div class="tree-item-contents heading-link" heading-name="3.1 Iptables Log Structure"><span class="tree-item-title">3.1 Iptables Log Structure</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="6"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#3.1.1_Current_Iptables_Log"><div class="tree-item-contents heading-link" heading-name="3.1.1 Current Iptables Log"><span class="tree-item-title">3.1.1 Current Iptables Log</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="6"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#3.1.2_Updated_Iptables_log"><div class="tree-item-contents heading-link" heading-name="3.1.2 Updated Iptables log"><span class="tree-item-title">3.1.2 Updated Iptables log</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#3.2_Wazuh_Decoder"><div class="tree-item-contents heading-link" heading-name="3.2 Wazuh Decoder"><span class="tree-item-title">3.2 Wazuh Decoder</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#3.2_Challenges_&amp;_Fixes"><div class="tree-item-contents heading-link" heading-name="3.2 Challenges &amp; Fixes"><span class="tree-item-title">3.2 Challenges &amp; Fixes</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#IV._Observations_&amp;_Insights"><div class="tree-item-contents heading-link" heading-name="IV. Observations &amp; Insights"><span class="tree-item-title">IV. Observations &amp; Insights</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#V._Considerations_&amp;_Next_Steps"><div class="tree-item-contents heading-link" heading-name="V. Considerations &amp; Next Steps"><span class="tree-item-title">V. Considerations &amp; Next Steps</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#VI._Conclusion"><div class="tree-item-contents heading-link" heading-name="VI. Conclusion"><span class="tree-item-title">VI. Conclusion</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="1"><a class="tree-link" href="projects\sending-firewall-logs-to-siem.html#References_(if_any)"><div class="tree-item-contents heading-link" heading-name="References (if any)"><span class="tree-item-title">References (if any)</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
